@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class oversTest {
-
+	overs over;
 	@Test
 	public void testSetBall() {
 		//
@@ -11,18 +11,26 @@ public class oversTest {
 
 	@Test
 	public void testGetBall() {
-		int[] s= new int[6];
-		int sum=0;
+		int[] s= new int[6];//score to be sent for an over
+		int score=0;
 		s[0]=1;
-		s[1]=1;
+		s[1]=2;
 		s[2]=1;
-		s[3]=1;
+		s[3]=2;
 		s[4]=1;
-		s[5]=1;
-		overs over=new overs(s);
-		sum=over.getBall();
-		assertEquals(6,sum);
-		System.out.println("6");
+		s[5]=2;
+		
+		over=new overs(s);
+		score=over.getBall();
+		assertEquals(9,score);
+		System.out.println("Score is "+score+" Runs");
 	}
 
+	public void testgetballscore() {
+		int score;
+			score=over.getballscore(2);
+			assertEquals(2,score);
+			System.out.println("Score for 2nd ball is "+score+" Runs");
+	}
+	
 }
