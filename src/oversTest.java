@@ -32,10 +32,11 @@ public class oversTest {
 		s[4]=0;	//5th ball
 		s[5]=0;	//6th ball
 		
+		int n=3;//ball
 		overs over=new overs(s);
-		score=over.getballscore(3);
+		score=over.getballscore(n);
 		assertEquals(5,score);
-		System.out.println("Score for 2nd ball is "+score+" Runs");
+		System.out.println("Score for "+n+" ball is "+score+" Runs");
 	}
 	
 }
