@@ -25,7 +25,6 @@ public class overs {
 	public int getballscore(int i) {
 			int score=ball[i-1];
 		return score;
-		
 	}
 	
 }

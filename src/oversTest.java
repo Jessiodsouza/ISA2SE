@@ -32,11 +32,35 @@ public class oversTest {
 		s[4]=0;	//5th ball
 		s[5]=0;	//6th ball
 		
-		int n=3;//ball
+		int n=3;//ball to get score of 
 		overs over=new overs(s);
 		score=over.getballscore(n);
 		assertEquals(5,score);
 		System.out.println("Score for "+n+" ball is "+score+" Runs");
 	}
+	
+	@Test
+	public void getallscore() {
+		int[] s= new int[6];//score to be sent for an over
+		int score=0;
+		s[0]=1;
+		s[1]=2;
+		s[2]=1;
+		s[3]=2;
+		s[4]=1;
+		s[5]=2;
+		
+		overs over1=new overs(s);
+		overs over2=new overs(s);
+
+		
+		score=over1.getBall();
+		score=score+over2.getBall();
+		
+		assertEquals(18,score);
+		System.out.println("Total Score is "+score+" Runs in "+2+" overs");
+	}
+	
+	
 	
 }
