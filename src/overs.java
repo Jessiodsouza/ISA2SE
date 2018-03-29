@@ -25,6 +25,7 @@ public class overs {
 	public int getballscore(int i) {
 			sum=sum+ball[i];
 		return sum;
+		
 	}
 	
 }

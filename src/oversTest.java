@@ -31,6 +31,7 @@ public class oversTest {
 			score=over.getballscore(2);
 			assertEquals(2,score);
 			System.out.println("Score for 2nd ball is "+score+" Runs");
+			
 	}
 	
 }
